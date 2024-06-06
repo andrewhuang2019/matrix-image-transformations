@@ -68,3 +68,14 @@ plot_shape(scaled_square, "Scaled Shape (2x, 0.5y)")
 translation = translation_matrix(3, 4)
 translated_square = apply_transformation(translation, square)
 plot_shape(translated_square, "Translated Shape (3, 4)")
+
+
+# The goal of this activity is to create a pentagon with points at 
+# (0,5) , (3.75, 3.75) , (3.75, -2.5) , (-5, -3) , (-5, 2.5)
+pentagon = np.array([[0, 3.75, 3.75, -5, -5, 0],
+                     [5, 3.75, -2.5, -3, 2.5, 5]])
+
+plot_shape(pentagon, "Pentagon")
+
+translated_pentagon = apply_transformation(translation, pentagon)
+plot_shape(translated_pentagon, "Translated Pentagon (3, 4)")
