@@ -70,12 +70,40 @@ translated_square = apply_transformation(translation, square)
 plot_shape(translated_square, "Translated Shape (3, 4)")
 
 
-# The goal of this activity is to create a pentagon with points at 
+# The goal of the first activity is to create a simple shape (i.e square)
+# Move the square to a certain location
+new_square = np.array([[1,1,-1,-1,1],
+                       [1,-1,-1,1,1]])
+
+plot_shape(new_square, "Square")
+
+translated_new_square = apply_transformation(translation, new_square)
+plot_shape(translated_new_square, "Translated Square (3, 4)")
+
+
+# The goal of the second activity is to create a pentagon with points at 
 # (0,5) , (3.75, 3.75) , (3.75, -2.5) , (-5, -3) , (-5, 2.5)
+# move the shape 
+# and scale the shape bigger or smaller 
 pentagon = np.array([[0, 3.75, 3.75, -5, -5, 0],
                      [5, 3.75, -2.5, -3, 2.5, 5]])
 
+pentagon2 = np.array([[0, 0.951, 0.588, -0.588, -0.951, 0],
+                     [1, 0.309, -0.809, -0.809, 0.309, 1]])
+
 plot_shape(pentagon, "Pentagon")
+plot_shape(pentagon2, "Pentagon")
 
 translated_pentagon = apply_transformation(translation, pentagon)
 plot_shape(translated_pentagon, "Translated Pentagon (3, 4)")
+
+# The goal of the third activity is to create a hexagon with the points at:
+# 
+# move the shape
+# and scale the shape bigger or smaller
+# and rotate the shape
+
+hexagon = np.array([[0.5, 1, 0.5, -0.5, -1, -0.5, 0.5],
+                     [0, 0.866, 1.732, 1.732, 0.866, 0, 0]])
+
+plot_shape(hexagon, "Hexagon")
