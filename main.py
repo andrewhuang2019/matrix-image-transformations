@@ -14,10 +14,17 @@ def plot_shape(points, title):
     plt.show()
 
 # Define the original shape (a square)
+# Each two numbers correspond to a point ex: (1,1) , (-1,1)
+# It draws a line between each point
 square = np.array([[1, -1, -1, 1, 1],
                    [1, 1, -1, -1, 1]])
 
+triangle = np.array([[0, 2.5, 2.5, 0],
+                   [0, 5, 0, 0]])
+
 plot_shape(square, "Original Shape")
+
+plot_shape(triangle, "Triangle")
 
 # Rotation Matrix
 def rotation_matrix(degrees):
