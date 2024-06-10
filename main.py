@@ -53,7 +53,34 @@ def apply_transformation(matrix, points):
         return transformed_points[:2, :]
     else:
         return matrix @ points
+    
+line = np.array([[-2.5, 0],
+                 [0, 5]])
 
+plot_shape(line, "Line")
+
+triangle = np.array([[0, 0, 2.5, 0],
+                     [0, 5, 0, 0]])
+
+plot_shape(triangle, "Triangle")
+
+number = 165
+
+radians = np.deg2rad(number)
+
+rotation_matrix = np.array([[np.cos(radians), -np.sin(radians)],
+                            [np.sin(radians), np.cos(radians)]])
+
+rotated_triangle = apply_transformation(rotation_matrix, triangle)
+
+plot_shape(rotated_triangle, "Rotated Triangle")
+
+
+
+
+
+
+'''
 # Rotate the square 90 degrees
 rotation = rotation_matrix(90)
 rotated_square = apply_transformation(rotation, square)
@@ -106,4 +133,4 @@ plot_shape(translated_pentagon, "Translated Pentagon (3, 4)")
 hexagon = np.array([[0.5, 1, 0.5, -0.5, -1, -0.5, 0.5],
                      [0, 0.866, 1.732, 1.732, 0.866, 0, 0]])
 
-plot_shape(hexagon, "Hexagon")
+plot_shape(hexagon, "Hexagon")'''
